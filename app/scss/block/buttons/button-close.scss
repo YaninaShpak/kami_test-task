@@ -1,0 +1,31 @@
+.button-close {
+  @include adaptiv-valueMobile(width, 35, 25);
+  @include adaptiv-valueMobile(height, 35, 25);
+
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  img {
+    width: 50%;
+    height: auto;
+
+    transition: transform 0.3s linear;
+  }
+
+  &:hover {
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.3);
+    
+    img {
+      transform: rotate(180deg);
+    }
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    width: 35px;
+    height: 35px;
+  }
+}

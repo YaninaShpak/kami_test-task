@@ -1,0 +1,49 @@
+.main-header {
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  right: 0;
+
+  background-color: $white;
+  box-shadow: 0px 4px 12px 10px rgba(0, 0, 0, 0.04);
+}
+
+.main-header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: vw(23, $maxWidth) 15px vw(16, $maxWidth);
+  
+  @media (max-width: #{$mobileWidth + px}) {
+
+    justify-content: stretch;
+    flex-wrap: wrap;
+
+    padding: 21px 15px 14px;
+  }
+}
+
+.main-header__logo {
+  flex-shrink: 0;
+
+  @include adaptiv-valueMobile(margin-right, 40, 20);
+
+  @media (max-width: #{$mobileWidth + px}) {
+    margin-right: 0;
+  }
+}
+
+.main-header__contacts {
+  flex-shrink: 0;
+
+  @include adaptiv-valueMobile(margin-left, 59, 10);
+
+  @media (max-width: #{$mobileWidth + px}) {
+    margin-left: auto;
+  }
+}
+
+.main-header__button {
+  order: 2;
+}

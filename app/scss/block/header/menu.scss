@@ -1,0 +1,82 @@
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: #{$mobileWidth + px}) {
+    flex-direction: column;
+  }
+}
+
+.menu__item {
+  cursor: pointer;
+
+  @media (max-width: #{$mobileWidth + px}) {
+    padding: 15px 15px 17px;
+    width: 100%;
+
+    border-bottom: 1px solid $grey_light;
+  }
+}
+
+.menu__item--more {
+  position: relative;
+  z-index: 5;
+}
+
+.menu__link {
+  font-weight: 500;
+  line-height: calc(19 / 16);
+
+  @include adaptiv-font(16, 12);
+}
+
+.menu__link--more {
+  position: relative;
+  
+  padding-right: 14px;
+
+  &::after {
+    content: url(../../../img/svgicons/arrow-more.svg);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    width: 7px;
+    height: 12px;
+
+    transition: transform 0.3s linear;
+  }
+}
+
+.menu__wrapper-sublist {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  z-index: 1;
+
+  padding-top: vw(48, $maxWidth);
+  @include adaptiv-valueMobile(width, 427, 300);
+
+  background: transparent;
+
+  @media (max-width: #{$mobileWidth + px}) {
+    position: static;
+
+    padding-top: 8px;
+    width: 100%;
+  }
+}
+
+.menu__item--more:hover {
+  .menu__wrapper-sublist {
+    display: block;
+  }
+
+  .menu__link--more::after {
+    @media (max-width: #{$mobileWidth + px}) {
+      transform: rotate(180deg) translate(-50%, -100%);
+    }
+  }
+}

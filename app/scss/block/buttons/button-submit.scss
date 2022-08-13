@@ -1,0 +1,44 @@
+.button-submit {
+  padding: 0.78em 3.22em;
+
+  font-weight: 700;
+  @include adaptiv-font(18, 8);
+  line-height: 128.5%;
+  text-align: center;
+  color: $black;
+
+  background-color: $yellow;
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  @media (max-width: #{$mobileWidth + px}) {
+    padding: 24px 58px;
+
+    font-size: 18px;
+    border-radius: 0;
+  }
+
+  &--quest {
+    display: none;
+    
+    @media (max-width: #{$mobileWidth + px}) {
+      display: inline;
+    }
+  }
+
+  &--post {
+    @media (max-width: #{$mobileWidth + px}) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    background-color: $yellow-light;
+  }
+
+  &:active {
+    background-color: $yellow-dark;
+  }
+}

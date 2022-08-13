@@ -1,0 +1,21 @@
+.main-nav .menu {
+  align-items: center;
+
+  @media (max-width: #{$mobileWidth + px}) {
+    align-items: flex-start;
+  }
+}
+
+.main-nav .menu__item {
+  @include adaptiv-valueMobile(margin-right, 46, 15);
+}
+
+.main-nav .menu__link {
+  color: $black;
+
+  @media (max-width: #{$mobileWidth + px}) {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 128.5%;
+  }
+}

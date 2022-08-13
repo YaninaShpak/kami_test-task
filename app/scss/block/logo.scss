@@ -1,0 +1,9 @@
+.logo img {
+  @include adaptiv-valueMobile(width, 333, 175);
+  height: auto;
+
+  @media (max-width: #{$mobileWidth + px}) {
+    width: vw(156, $minMobileWidth);
+    height: auto;
+  }
+}

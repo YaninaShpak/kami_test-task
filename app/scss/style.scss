@@ -1,0 +1,39 @@
+@use "sass:math";
+
+@import 'fonts.scss';
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'global.scss';
+
+//buttons
+
+@import 'block/buttons/button-call.scss';
+@import 'block/buttons/button-submit.scss';
+@import 'block/buttons/button-close';
+@import 'block/buttons/button-menu.scss';
+
+@import 'block/logo.scss';
+
+//header
+
+@import 'block/header/main-header.scss';
+@import 'block/header/navigation.scss';
+@import 'block/header/sub-nav.scss';
+@import 'block/header/main-nav.scss';
+@import 'block/header/menu.scss';
+@import 'block/header/sublist-menu.scss';
+@import 'block/header/contacts-block.scss';
+
+//main
+
+@import 'block/promo.scss';
+@import 'block/products.scss';
+@import 'block/products-list.scss';
+
+//swiper
+@import 'block/swiper/swiper-slide.scss';
+
+//modal
+@import 'block/modal/modal.scss';
+
+@import 'block/modal/form-callback.scss';

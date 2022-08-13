@@ -1,0 +1,41 @@
+.button-call {
+  padding: 0.44em 1.06em;
+
+  font-weight: 500;
+  @include adaptiv-font(16, 12);
+  line-height: calc(19 / 16);
+  color: $black;
+
+  background-color: #e5e5e5;
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #eeeeee;
+
+    @media (max-width: #{$mobileWidth + px}) {
+      background-color: $yellow-light;
+    }
+  }
+
+  &:active {
+    background-color: #dbdbdb;
+
+    @media (max-width: #{$mobileWidth + px}) {
+      background-color: $yellow-dark;
+    }
+  }
+
+  @media (max-width: #{$mobileWidth + px}) {
+    padding: 14px 32px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 128.5%;
+    text-align: center;
+
+    background-color: $yellow;
+  }
+}

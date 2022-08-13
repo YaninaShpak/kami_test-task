@@ -1,0 +1,19 @@
+.sub-nav .menu {
+  margin-bottom: 13px;
+
+  @include adaptiv-valueMobile(column-gap, 53, 15);
+}
+
+.sub-nav .menu__link {
+  color: #808080;
+  
+  @media (max-width: #{$mobileWidth + px}) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 128.5%;
+  }
+
+  &:hover {
+    color: $black;
+  }
+}

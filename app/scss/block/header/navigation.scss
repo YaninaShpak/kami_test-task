@@ -1,0 +1,47 @@
+.navigation {
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  @media (max-width: #{$mobileWidth + px}) {
+    display: none;
+    flex-wrap: nowrap;
+    padding: 0 15px;
+  }
+}
+
+.navigation.show {
+  @media (max-width: #{$mobileWidth + px}) {
+    position: absolute;
+    top: 74px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    
+    display: flex;
+    flex-direction: column;
+    
+    height: 90vh;
+    overflow-y: auto;
+
+    background: $white;
+  }
+
+  @media (max-width: #{$minMobileWidth + px}) {
+    top: vw(74, $minMobileWidth);
+  }
+}
+
+.navigation__main {
+  @media (max-width: #{$mobileWidth + px}) {
+    order: -1;
+  }
+}
+
+.navigation__button {
+  @media (max-width: #{$mobileWidth + px}) {
+    margin: 24px auto;
+  }
+}
